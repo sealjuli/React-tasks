@@ -1,16 +1,30 @@
 import { useRef, useState } from "react";
 
-const SearchInput = ({ search, updateSearch }) => {
-  const inputChange = (event) => updateSearch(event.target.value);
+const SearchInput = ({ array, setArray }) => {
+  const [text, setText] = useState("");
+  const textInput = useRef(null);
+
+  const inputChange = (event) => setText((text) => event.target.value);
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      updateSearch("");
+      setArray((array) => [...array, event.target.value]);
+      setText((text) => "");
     }
   };
 
+  const buttonClick = () => textInput.current.focus();
+
   return (
-    <input value={search} onChange={inputChange} onKeyDown={handleKeyDown} />
+    <>
+      <input
+        ref={textInput}
+        value={text}
+        onChange={inputChange}
+        onKeyDown={handleKeyDown}
+      />
+      <button onClick={buttonClick}>Фокус</button>
+    </>
   );
 };
 
