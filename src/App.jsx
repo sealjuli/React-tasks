@@ -1,17 +1,35 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import ChildComponent from "./components/ChildComponent";
-import SearchInput from "./components/SearchInput";
-import { useState } from "react";
+import List from "./components/ChildComponent";
+import { useState, useRef } from "react";
 
 const ParentComponent = () => {
   const [array, setArray] = useState([1, 2, 3]);
+  const [text, setText] = useState("");
+  const textInput = useRef(null);
+
+  const inputChange = (event) => setText((text) => event.target.value);
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setArray((array) => [...array, event.target.value]);
+      setText((text) => "");
+    }
+  };
+
+  const buttonClick = () => textInput.current.focus();
 
   return (
     <div>
-      <SearchInput array={array} setArray={setArray}></SearchInput>
-      <ChildComponent array={array} setArray={setArray}></ChildComponent>
+      <input
+        ref={textInput}
+        value={text}
+        onChange={inputChange}
+        onKeyDown={handleKeyDown}
+      />
+      <button onClick={buttonClick}>Фокус</button>
+      <List array={array} setArray={setArray}></List>
     </div>
   );
 };

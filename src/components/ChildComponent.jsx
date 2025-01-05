@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ChildComponent = ({ array, setArray }) => {
+const List = ({ array, setArray }) => {
   const buttonClick = (event) => {
     setArray((array) => {
       const newarr = [...array];
@@ -21,4 +21,4 @@ const ChildComponent = ({ array, setArray }) => {
   return <ul>{items}</ul>;
 };
 
-export default ChildComponent;
+export default List;
