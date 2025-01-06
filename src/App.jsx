@@ -1,8 +1,8 @@
+import { useState, useRef } from "react";
+import List from "./components/ChildComponent";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import List from "./components/ChildComponent";
-import { useState, useRef } from "react";
 
 const ParentComponent = () => {
   const [array, setArray] = useState([1, 2, 3]);
@@ -14,7 +14,7 @@ const ParentComponent = () => {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setArray((array) => [...array, event.target.value]);
-      setText((text) => "");
+      setText("");
     }
   };
 

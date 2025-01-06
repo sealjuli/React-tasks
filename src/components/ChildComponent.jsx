@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const List = ({ array, setArray }) => {
-  const buttonClick = (event) => {
+  const buttonClick = (idx) => {
     setArray((array) => {
       const newarr = [...array];
-      newarr[event.target.value] = "!!!" + newarr[event.target.value];
+      newarr[idx] = "!!!" + newarr[idx];
       return newarr;
     });
   };
@@ -12,9 +12,7 @@ const List = ({ array, setArray }) => {
   const items = array.map((number, idx) => (
     <li key={idx}>
       {number}
-      <button value={idx} onClick={buttonClick}>
-        click
-      </button>
+      <button onClick={() => buttonClick(idx)}>click</button>
     </li>
   ));
 
