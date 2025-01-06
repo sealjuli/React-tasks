@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import React from "react";
 
-const SearchInput = ({ search, updateSearch }) => {
+const SearchInput = React.memo(({ search, updateSearch }) => {
+  console.log("SearchInput");
   const inputChange = (event) => updateSearch(event.target.value);
 
   const handleKeyDown = (event) => {
@@ -12,6 +13,6 @@ const SearchInput = ({ search, updateSearch }) => {
   return (
     <input value={search} onChange={inputChange} onKeyDown={handleKeyDown} />
   );
-};
+});
 
 export default SearchInput;

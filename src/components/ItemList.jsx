@@ -1,6 +1,8 @@
 import { useMemo } from "react";
+import React from "react";
 
-const ItemList = ({ array, search }) => {
+const ItemList = React.memo(({ array, search }) => {
+  console.log("ItemList");
   // Вычисления, требующие много времени или ресурсов
   // Например, фильтрация или сортировка массива данных
   const items = useMemo(
@@ -12,6 +14,6 @@ const ItemList = ({ array, search }) => {
   );
 
   return <ul>{items}</ul>;
-};
+});
 
 export default ItemList;

@@ -1,17 +1,18 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState, useCallback } from "react";
 import CounterButton from "./components/CounterButton";
 import ItemList from "./components/ItemList";
 import SearchInput from "./components/SearchInput";
-import { useRef, useState, useCallback } from "react";
+import "./App.css";
 
 const ParentComponent = () => {
-  const array = [];
+  console.log("ParentComponent");
+
+  const a = [];
   for (let i = 0; i < 1001; i++) {
-    array.push(i);
+    a.push(i);
   }
 
+  const [array, setArray] = useState(a);
   const [search, setSearch] = useState("");
   const [count, setCount] = useState(0);
 
