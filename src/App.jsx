@@ -1,5 +1,8 @@
 import { useState, useCallback } from "react";
 import CounterButton from "./components/CounterButton";
+import { Context, Themes } from "./contexts/Context";
+import ThemaText from "./components/Thema";
+import CheckBox from "./components/Toggler";
 import ItemList from "./components/ItemList";
 import SearchInput from "./components/SearchInput";
 import "./App.css";
@@ -15,6 +18,7 @@ const ParentComponent = () => {
   const [array, setArray] = useState(a);
   const [search, setSearch] = useState("");
   const [count, setCount] = useState(0);
+  const [thema, setThema] = useState(Themes.light);
 
   const updateSearch = useCallback((newSearch) => {
     setSearch((search) => newSearch);
@@ -24,14 +28,19 @@ const ParentComponent = () => {
     setCount((count) => newCount);
   }, []);
 
+  const root = document.documentElement;
+  root.dataset.theme = thema;
+
   return (
-    <div>
+    <Context.Provider value={thema}>
+      <ThemaText></ThemaText>
+      <CheckBox thema={thema} setThema={setThema}></CheckBox>
       <h3>{count}</h3>
       <CounterButton count={count} updateCount={updateCount}></CounterButton>
       <br></br>
       <SearchInput search={search} updateSearch={updateSearch}></SearchInput>
       <ItemList array={array} search={search}></ItemList>
-    </div>
+    </Context.Provider>
   );
 };
 
