@@ -1,5 +1,4 @@
-import { useMemo } from "react";
-import React from "react";
+import React, { useMemo } from "react";
 
 const ItemList = React.memo(({ array, search }) => {
   console.log("ItemList");
