@@ -118,13 +118,11 @@ const RegistrationForm = () => {
         </p>
         <button type="submit">Зарегестрироваться</button>
       </form>
-      {showModal && (
-        <ModalWindow
-   showModal={showModal}
-       setShowModal={setShowModal}
-    data={data}
- />
-      )}
+      <ModalWindow
+        showModal={showModal}
+        setShowModal={setShowModal}
+        data={data}
+      />
     </div>
   );
 };

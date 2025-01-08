@@ -1,6 +1,4 @@
 const ModalWindow = ({ showModal, setShowModal, data }) => {
-  console.log("ModalWindow");
-
   return (
     <div
       className={showModal ? "modal active" : "modal"}

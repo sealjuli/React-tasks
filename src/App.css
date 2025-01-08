@@ -58,12 +58,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: 0.5s;
+  transform: scale(0);
 }
 
 .modal.active {
-  opacity: 1;
+  transform: scale(1);
 }
 
 .modal__context {
