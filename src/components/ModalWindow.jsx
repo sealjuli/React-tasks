@@ -1,9 +1,19 @@
-import React from "react";
-
-const ModalWindow = React.memo(({ data }) => {
+const ModalWindow = ({ showModal, setShowModal, data }) => {
   console.log("ModalWindow");
 
-  return <div>{"Успешно зарегестрировано " + JSON.stringify(data)}</div>;
-});
+  return (
+    <div
+      className={showModal ? "modal active" : "modal"}
+      onClick={() => setShowModal(false)}
+    >
+      <div className="modal__context" onClick={(e) => e.stopPropagation()}>
+        <b>{"Успешно зарегистрировано"}</b>
+        <div>{JSON.stringify(data)}</div>
+        <br></br>
+        <i>{"Для закрытия модального окна нажмите на любое место вне его"}</i>
+      </div>
+    </div>
+  );
+};
 
 export default ModalWindow;

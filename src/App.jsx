@@ -15,11 +15,8 @@ const RegistrationForm = () => {
     reset,
   } = useForm();
 
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
-
   const onSubmit = (data) => {
-    openModal();
+    setShowModal(true);
     setData(data);
     reset();
   };
@@ -121,7 +118,13 @@ const RegistrationForm = () => {
         </p>
         <button type="submit">Зарегестрироваться</button>
       </form>
-      {showModal && <ModalWindow onClose={closeModal} data={data} />}
+      {showModal && (
+        <ModalWindow
+   showModal={showModal}
+       setShowModal={setShowModal}
+    data={data}
+ />
+      )}
     </div>
   );
 };
