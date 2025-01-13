@@ -34,7 +34,7 @@ li {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {
@@ -44,7 +44,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+/*  place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }
@@ -79,6 +79,6 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #4d4d9b;
   }
 }
