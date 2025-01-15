@@ -21,103 +21,103 @@ const App = () => {
     <div className="parent_container">
       <nav className="navigation">
         <NavLink
-          to="/"
+          to="/React-tasks/"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Главная
         </NavLink>
         <NavLink
-          to="/virtualDOM"
+          to="/React-tasks/virtualDOM"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           VirtualDOM
         </NavLink>
         <NavLink
-          to="/components"
+          to="/React-tasks/components"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Components
         </NavLink>
 
         <NavLink
-          to="/props"
+          to="/React-tasks/props"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Props
         </NavLink>
 
         <NavLink
-          to="/state"
+          to="/React-tasks/state"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           State (useState)
         </NavLink>
 
         <NavLink
-          to="/lifeCycle"
+          to="/React-tasks/lifeCycle"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           LifeCycle (useEffect)
         </NavLink>
 
         <NavLink
-          to="/events"
+          to="/React-tasks/events"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Events
         </NavLink>
 
         <NavLink
-          to="/refs"
+          to="/React-tasks/refs"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Refs
         </NavLink>
 
         <NavLink
-          to="/fragment"
+          to="/React-tasks/fragment"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Fragment
         </NavLink>
 
         <NavLink
-          to="/key"
+          to="/React-tasks/key"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Key
         </NavLink>
 
         <NavLink
-          to="/reactmemo"
+          to="/React-tasks/reactmemo"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           React.memo
         </NavLink>
 
         <NavLink
-          to="/useMemo"
+          to="/React-tasks/useMemo"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           useMemo
         </NavLink>
 
         <NavLink
-          to="/context"
+          to="/React-tasks/context"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Context
         </NavLink>
 
         <NavLink
-          to="/router"
+          to="/React-tasks/router"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Router
         </NavLink>
 
         <NavLink
-          to="/form"
+          to="/React-tasks/form"
           className={({ isActive }) => (isActive ? "active" : "inactive")}
         >
           Forms
@@ -127,21 +127,21 @@ const App = () => {
         <Outlet />
       </div>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/virtualDOM" element={<VirtualDOMPage />} />
-        <Route path="/components" element={<ComponentsPage />} />
-        <Route path="/props" element={<PropsPage />} />
-        <Route path="/state" element={<StatePage />} />
-        <Route path="/lifeCycle" element={<LifeCyclePage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/refs" element={<RefsPage />} />
-        <Route path="/fragment" element={<FragmentPage />} />
-        <Route path="/key" element={<KeyPage />} />
-        <Route path="/reactmemo" element={<ReactMemoPage />} />
-        <Route path="/useMemo" element={<UseMemoPage />} />
-        <Route path="/context" element={<ContextPage />} />
-        <Route path="/router" element={<RouterPage />} />
-        <Route path="/form" element={<FormPage />} />
+        <Route path="/React-tasks" element={<HomePage />} />
+        <Route path="/React-tasks/virtualDOM" element={<VirtualDOMPage />} />
+        <Route path="/React-tasks/components" element={<ComponentsPage />} />
+        <Route path="/React-tasks/props" element={<PropsPage />} />
+        <Route path="/React-tasks/state" element={<StatePage />} />
+        <Route path="/React-tasks/lifeCycle" element={<LifeCyclePage />} />
+        <Route path="/React-tasks/events" element={<EventsPage />} />
+        <Route path="/React-tasks/refs" element={<RefsPage />} />
+        <Route path="/React-tasks/fragment" element={<FragmentPage />} />
+        <Route path="/React-tasks/key" element={<KeyPage />} />
+        <Route path="/React-tasks/reactmemo" element={<ReactMemoPage />} />
+        <Route path="/React-tasks/useMemo" element={<UseMemoPage />} />
+        <Route path="/React-tasks/context" element={<ContextPage />} />
+        <Route path="/React-tasks/router" element={<RouterPage />} />
+        <Route path="/React-tasks/form" element={<FormPage />} />
       </Routes>
     </div>
   );
