@@ -2,6 +2,7 @@
   "name": "first-react-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://sealjuli.github.io/React-tasks",
   "type": "module",
   "scripts": {
     "dev": "vite",
